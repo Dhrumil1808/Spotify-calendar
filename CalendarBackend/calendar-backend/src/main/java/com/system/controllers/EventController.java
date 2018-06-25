@@ -29,8 +29,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import com.system.entity.Events;
 import com.system.dao.EventDAO;
 
-@CrossOrigin(origins ={"https://calendar-agenda.herokuapp.com","http://calendar-agenda.herokuapp.com"}, maxAge = 3600)
-//@CrossOrigin(origins ="http://localhost:3000", maxAge = 3600)
+//@CrossOrigin(origins ={"https://calendar-agenda.herokuapp.com","http://calendar-agenda.herokuapp.com"}, maxAge = 3600)
+@CrossOrigin(origins ="http://localhost:3000", maxAge = 3600)
 @RestController
 public class EventController {
 
