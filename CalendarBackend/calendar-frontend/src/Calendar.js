@@ -24,7 +24,7 @@ class Calendar extends React.Component {
   events(){
     const self = this;
     let days=[];
-    axios.get('https://calendar-backend.herokuapp.com/events'
+    axios.get('http://localhost:8080/events'
       ).then(function (response) {
           for(var i=0;i<response.data.length;i++){
               days.push(response.data[i].startDate);
@@ -220,7 +220,7 @@ class Eventedit extends React.Component {
 
    //console.log(data);
    //console.log('http://127.0.0.1:8080/events/'+this.props.ids);
-   axios.delete('https://calendar-backend.herokuapp.com/events/'+this.props.ids, data, {
+   axios.delete('http://localhost:8080/events/'+this.props.ids, data, {
          headers: {
              'Content-Type': 'application/json',
              'crossDomain': false
@@ -273,7 +273,7 @@ class Eventedit extends React.Component {
    var comp = this.state.starttime.localeCompare(this.state.endtime);
    console.log(comp);
    if(comp==-1){
-   axios.put('https://calendar-backend.herokuapp.com/events/'+this.props.ids, data, {
+   axios.put('http://localhost:8080/events/'+this.props.ids, data, {
          headers: {
              'Content-Type': 'application/json',
              'crossDomain': false
@@ -396,7 +396,7 @@ class Events extends React.Component {
    console.log(comp);
 
    if(comp==-1){
-   axios.post('https://calendar-backend.herokuapp.com/events', data, {
+   axios.post('http://localhost:8080/events', data, {
          headers: {
              'Content-Type': 'application/json',
              'crossDomain': false
@@ -529,7 +529,7 @@ class Day extends React.Component {
   getEvents(startdate){
     const self = this;
     let events=[];
-    axios.get('https://calendar-backend.herokuapp.com/events'
+    axios.get('http://localhost:8080/events'
       ).then(function (response) {
           for(var i=0;i<response.data.length;i++){
 
