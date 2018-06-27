@@ -20,6 +20,9 @@ Consists of four APIs namely:
 # 1) Get All Events
 
 API:  http://localhost:8080/events
+
+
+
 { "eventId" : <event_id>, "starttime": <start_time>,"endtime": <end_time>,"startDate": <start_date>,  "endDate": <end_date> , 
         "eventDesc": <event_description>}
         
@@ -27,12 +30,17 @@ API:  http://localhost:8080/events
 #  2) Create an Event
 
 API:  http://localhost:8080/events
+
+
+
 { "starttime": <start_time>,"endtime": <end_time>,"startdate": <start_date>,  "enddate": <end_date> , 
         "description": <event_description>}
         
 # 3) Edit an Event
 
 API:  http://localhost:8080/events/{event_id}
+
+
 { "starttime": <start_time>,"endtime": <end_time>,"startdate": <start_date>,  "enddate": <end_date> , 
         "description": <event_description>}
         
@@ -42,15 +50,20 @@ API:  http://localhost:8080/events/{event_id}
  API: http://localhost:8080/events/{event_id}
  
  
+## Database
 
 
-Steps for running it on localhost:
+Create a database with fields Id, startdate, enddate, starttime, endtime, description.
+
+
+
+# Steps for running it on localhost:
 
 1) git clone https://github.com/Dhrumil1808/Spotify-calendar
 2) go to calendar-backend directory
 3) run mvn clean install 
 4) if you are using Eclipse IDE, then you can directly run the "Application.java" file from the eclipse.
-It will start the server on http://localhost:8080
+It will start the server on http://localhost:8080 . You might need to accordingly change the username,password and url of the database in "application.properties" file.
 
 5) Go to calendar-frontend directory
 6) run npm install
