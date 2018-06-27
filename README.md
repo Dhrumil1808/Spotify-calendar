@@ -13,11 +13,11 @@ It has two parts:
 2) calendar-backend : Developed in Spring Boot.
 
 
-# Calendar- Backend
+## Calendar- Backend
 
 Consists of four APIs namely:
 
-# 1) Get All Events
+### 1) Get All Events (GET API)
 
 API:  http://localhost:8080/events
 
@@ -27,25 +27,25 @@ API:  http://localhost:8080/events
         "eventDesc": <event_description>}
         
 
-#  2) Create an Event
+###  2) Create an Event (POST API)
 
 API:  http://localhost:8080/events
 
 
 
-{ "starttime": <start_time>,"endtime": <end_time>,"startdate": <start_date>,  "enddate": <end_date> , 
+Request Body { "starttime": <start_time>,"endtime": <end_time>,"startdate": <start_date>,  "enddate": <end_date> , 
         "description": <event_description>}
         
-# 3) Edit an Event
+### 3) Edit an Event (PUT API)
 
 API:  http://localhost:8080/events/{event_id}
 
 
-{ "starttime": <start_time>,"endtime": <end_time>,"startdate": <start_date>,  "enddate": <end_date> , 
+ Request Body  { "starttime": <start_time>,"endtime": <end_time>,"startdate": <start_date>,  "enddate": <end_date> , 
         "description": <event_description>}
         
         
- # 4) Delete an Event
+ ### 4) Delete an Event (DELETE API)
  
  API: http://localhost:8080/events/{event_id}
  
@@ -57,7 +57,7 @@ Create a database with fields Id, startdate, enddate, starttime, endtime, descri
 
 
 
-# Steps for running it on localhost:
+## Steps for running it on localhost:
 
 1) git clone https://github.com/Dhrumil1808/Spotify-calendar
 2) go to calendar-backend directory
